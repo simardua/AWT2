@@ -1,0 +1,30 @@
+.rounded{
+    width: 100%;
+    height: 45vw;
+    object-fit: contain;
+}
+.cards-wrapper{
+    display: flex;
+}
+.card{
+    margin: 0 .5em;
+    width: calc(100%3);
+}
+@media screen and (max-width: 700px) {
+    .card:not(:first-child){
+        display: none;
+    }
+    
+}
+.card-img-top {
+    width: 100%;
+    height: 10vw;
+    object-fit: contain;
+}
+.custom-card{
+    color: inherit;
+    text-decoration: none;
+}
+.custom-card:hover {
+    text-decoration: underline;
+}
