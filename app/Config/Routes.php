@@ -42,6 +42,7 @@ $routes->match(['get','post'],'profile', 'Users::profile',['filter' => 'auth']);
 $routes->get('dashboard', 'Dashboard::index',['filter' => 'auth']);
 $routes->get('home', 'Users::home',);
 $routes->get('/deleteAccount','Users::deleteAccount',);
+$routes->match(['get','post'],'products', 'Users::products');
 // $routes->match(['get','post'],'/register', 'Users::register');
 
 /*

@@ -158,4 +158,8 @@ class Users extends BaseController
 	// 	return redirect()->to(base_url()."/");
 
 	// }
+
+	public function products(){
+		echo view('products');
+	}
 }

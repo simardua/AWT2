@@ -7,11 +7,18 @@
     <link rel = "icon" href="images/favicon.ico" type = "image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/style2.css">
+    <link rel="stylesheet" href="/assets/css/style1.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script
+      src="https://kit.fontawesome.com/8f27d68390.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
     <section>
+      
     <nav class="navbar navbar-expand-md bg-info bg-gradient fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#home">
@@ -20,13 +27,14 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#products">Products</a>
+              <a class="nav-link" href="products">Products</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#aboutus">About Us</a>
@@ -42,13 +50,7 @@
               </ul>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-dark" type="submit">Search</button>
-
-
-
-            <?php if (session()->get('isLoggedIn')): ?>
+          <?php if (session()->get('isLoggedIn')): ?>
               <div class="dropdown">
   <button class="btn btn-outline-dark ms-2 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
   <?= session()->get('firstname') ?>
@@ -61,10 +63,38 @@
       <?php else: ?>
         <a class="btn btn-outline-dark ms-2" href="/">Login</a>
         <?php endif; ?>
-            
+            <br>
+          
+          <form class="d-flex" role="search">
+            <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-dark" type="submit">Search</button>
+
+
+
+           
+           
+        </div>
+<div></div>
+        
+        </div>
+        
+        <div class="cart-box">
+        <div class="cart-icon">
+          <i class="fas fa-cart-arrow-down fa-2x"></i>
+        </div>
+        <div class="whole-cart-window hide">
+          <h2>Shopping Bag</h2>
+          <div class="cart-wrapper">
+           
+          </div>
+          <div class="subtotal">Subtotal: ₹0.00</div>
+          <div class="checkout">Checkout</div>
+          <div class="view-cart">View Cart</div>
         </div>
       </div>
+      
     </nav>
+    
   </section>
 
 
@@ -544,5 +574,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="script/script.js"></script>
   </body>
 </html>

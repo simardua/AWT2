@@ -25,7 +25,7 @@
       <?php if (session()->get('isLoggedIn')): ?>
         <ul class="navbar-nav mr-auto">
           <li class="nav-item <?= ($uri->getSegment(1) == 'dashboard' ? 'active' : null) ?>">
-            <a class="nav-link"  href="/dashboard"><b>Dashboard</b></a>
+            <a class="nav-link"  href="home"><b>Home</b></a>
           </li>
           <li class="nav-item <?= ($uri->getSegment(1) == 'profile' ? 'active' : null) ?>">
             <a class="nav-link" href="/profile"><b>Profile</b></a>
